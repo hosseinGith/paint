@@ -56,10 +56,6 @@ if(navigator.platform === 'Win32'){
     }
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
-    window.addEventListener('resize',()=>{
-        canvas.width = canvas.offsetWidth
-        canvas.height = canvas.offsetHeight
-    })
     function Drowing(e){
         if(!isDrowing)
         return
