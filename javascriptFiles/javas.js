@@ -51,28 +51,45 @@ if(navigator.platform === 'Win32'){
         ctx.fillRect(0,0,canvas.offsetWidth,canvas.offsetHeight)
     })
 }else{
-function drow(e){
-    isDrowing = true
-}
-canvas.width = canvas.offsetWidth
-canvas.height = canvas.offsetHeight
-window.addEventListener('resize',()=>{
+    function drow(e){
+        isDrowing = true
+    }
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
-})
-function Drowing(e){
-    if(!isDrowing)
-    return
-    let x = e.touches[0].clientX-10
-    let y = e.touches[0].clientY-110
-    ctx.lineTo(x,y)
-    ctx.stroke()
-}
-function endDrawing(){
-    ctx.beginPath()
-    isDrowing = false
-}
-canvas.addEventListener('touchstart',drow)
-canvas.addEventListener('touchmove',Drowing)
-canvas.addEventListener('touchend',endDrawing)
+    window.addEventListener('resize',()=>{
+        canvas.width = canvas.offsetWidth
+        canvas.height = canvas.offsetHeight
+    })
+    function Drowing(e){
+        if(!isDrowing)
+        return
+        let x = e.touches[0].clientX-10
+        let y = e.touches[0].clientY-110
+        ctx.lineWidth = brushRange.value
+        ctx.strokeStyle = brushCol
+        ctx.lineTo(x,y)
+        ctx.stroke()
+    }
+    function endDrawing(){
+        ctx.beginPath()
+        isDrowing = false
+    }
+    canvas.addEventListener('touchstart',drow)
+    canvas.addEventListener('touchmove',Drowing)
+    canvas.addEventListener('touchend',endDrawing)
+    canvas.addEventListener('mouseleave',endDrawing)
+    brushColor.addEventListener('change',()=>{
+        brushCol = brushColor.value
+    })
+    brush.addEventListener('click',()=>{
+        brushCol = brushColor.value
+    })
+    eraser.addEventListener('click',()=>{
+        brushCol = '#fff'
+    })
+    clear.addEventListener('click',()=>{
+        ctx.fillStyle = '#fff'
+        ctx.fillRect(0,0,canvas.offsetWidth,canvas.offsetHeight)
+    })
+
 }
