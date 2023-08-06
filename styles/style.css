@@ -66,11 +66,6 @@ body{
 .saveClear button:active{
     background-color: #00000080;
 }
-.brushSizeColor{
-}
-.brushRange{
-
-}
 .brushColor{
     border: 0;
     border-radius: 1em;
@@ -82,4 +77,9 @@ canvas{
     border: 1px solid;
     height: 500px;
     width: 100%;
+}
+@media screen and (max-width:500px) {
+    canvas{
+        height: 100%;
+    }
 }
