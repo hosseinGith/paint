@@ -80,8 +80,3 @@ canvas{
     height: 500px;
     width: 100%;
 }
-@media screen and (max-width:500px) {
-    canvas{
-        height: 100%;
-    }
-}
