@@ -105,7 +105,7 @@ function loadText(){
     xhr.open("GET","javascriptFiles/test.txt",true)
     xhr.onload=()=>{
         if(xhr.status === 200)
-        text.innerHTML = xhr.response
+        alert(xhr.response)
     }
     xhr.send()
 }
