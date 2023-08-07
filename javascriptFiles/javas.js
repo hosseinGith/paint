@@ -97,3 +97,18 @@ if(navigator.platform === 'Win32'){
     })
 
 }
+const ajax = document.getElementById('myAjax')
+const text = document.getElementById('text')
+
+function loadText(){
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET","javascriptFiles/test.txt",true)
+    xhr.onload=()=>{
+        if(xhr.status === 200)
+        text.innerHTML = xhr.response
+    }
+    xhr.send()
+}
+
+ajax.addEventListener('click',loadText)
+console.log(true);
