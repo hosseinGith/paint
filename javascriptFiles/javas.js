@@ -51,24 +51,16 @@ if(navigator.platform === 'Win32'){
         ctx.fillRect(0,0,canvas.offsetWidth,canvas.offsetHeight)
     })
 }else{
-    let wid = 0
-    let heit = 0
     function drow(){
         isDrowing = true
     }
-    window.addEventListener('load',()=>{
-        window.innerWidth = 360?wid=10:console.log(); 
-        window.innerWidth = 360?heit=110:console.log(); 
-        window.innerWidth <= 400?wid=10:console.log(); 
-        window.innerWidth <= 400?heit=110:console.log(); 
-    })
     canvas.width = canvas.clientWidth
     canvas.height = canvas.clientHeight
     function Drowing(e){
         if(!isDrowing)
         return
-        let x = e.touches[0].clientX-wid
-        let y = e.touches[0].clientY-heit
+        let x = e.touches[0].clientX
+        let y = e.touches[0].clientY
         ctx.lineWidth = brushRange.value
         ctx.strokeStyle = brushCol
         ctx.lineTo(x,y)
