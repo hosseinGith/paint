@@ -54,11 +54,11 @@ if(navigator.platform === 'Win32'){
     function drow(){
         isDrowing = true
     }
-    canvas.width = canvas.clientWidth
-    canvas.height = canvas.clientHeight
+    canvas.width = canvas.offsetWidth
+    canvas.height = canvas.offsetHeight
     function Drowing(e){
         if(!isDrowing)
-        return
+        returoffset    
         let x = e.touches[0].offsetX
         let y = e.touches[0].offsetY
         ctx.lineWidth = brushRange.value
