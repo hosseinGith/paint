@@ -59,8 +59,8 @@ if(navigator.platform === 'Win32'){
     function Drowing(e){
         if(!isDrowing)
         returoffset    
-        let x = e.touches[0].offsetX
-        let y = e.touches[0].offsetY
+        let x = e.touches[0].pageX
+        let y = e.touches[0].pageY
         ctx.lineWidth = brushRange.value
         ctx.strokeStyle = brushCol
         ctx.lineTo(x,y)
