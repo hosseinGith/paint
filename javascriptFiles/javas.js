@@ -66,7 +66,6 @@ function endDrawingPhone() {
 }
 function leaveCanvasPhone() {
     ctx.beginPath()
-    console.log(1);
 }
 canvas.addEventListener('touchmove', DrowingPhone)
 canvas.addEventListener('touchend', endDrawingPhone)
