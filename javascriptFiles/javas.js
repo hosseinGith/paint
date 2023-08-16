@@ -60,7 +60,7 @@ if(navigator.platform === 'Win32'){
         if(!isDrowing)
         returoffset    
         let x = e.touches[0].clientX - canvas.offsetLeft
-        let y = e.touches[0].clientY - canvas.offseTop
+        let y = e.touches[0].clientY - canvas.offsetTop
         ctx.lineWidth = brushRange.value
         ctx.strokeStyle = brushCol
         ctx.lineTo(x,y)
