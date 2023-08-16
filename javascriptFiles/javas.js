@@ -9,7 +9,7 @@ let ctx = canvas.getContext('2d')
 let isDrowing = false
 brushRange.value = 1
 let brushCol = ''
-function resz(){
+function resz() {
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
 }
@@ -81,4 +81,4 @@ canvas.addEventListener('touchend', endDrawingPhone)
 
 //----------if the ueser change the window size ,the canvas will refresh the self offset width----- 
 
-window.addEventListener('resize',resz)
+window.addEventListener('resize', resz)
