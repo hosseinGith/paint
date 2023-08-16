@@ -64,12 +64,9 @@ function DrowingPhone(e) {
 function endDrawingPhone() {
     ctx.beginPath()
 }
-function leaveCanvasPhone() {
-    ctx.beginPath()
-}
+
 canvas.addEventListener('touchmove', DrowingPhone)
 canvas.addEventListener('touchend', endDrawingPhone)
-canvas.addEventListener('touchcancel', leaveCanvasPhone)
 
 brushColor.addEventListener('change', () => {
     brushCol = brushColor.value
