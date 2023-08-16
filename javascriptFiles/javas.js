@@ -53,9 +53,9 @@ clear.addEventListener('click', () => {
 
 
 function DrowingPhone(e) {
-
     let x = e.touches[0].clientX - canvas.offsetLeft
     let y = e.touches[0].clientY - canvas.offsetTop
+
     ctx.lineWidth = brushRange.value
     ctx.strokeStyle = brushCol
     ctx.lineTo(x, y)
@@ -63,10 +63,14 @@ function DrowingPhone(e) {
 }
 function endDrawingPhone() {
     ctx.beginPath()
-    isDrowing = false
+}
+function leaveCanvasPhone() {
+    ctx.beginPath()
+    console.log(1);
 }
 canvas.addEventListener('touchmove', DrowingPhone)
 canvas.addEventListener('touchend', endDrawingPhone)
+canvas.addEventListener('touchcancel', leaveCanvasPhone)
 
 brushColor.addEventListener('change', () => {
     brushCol = brushColor.value
