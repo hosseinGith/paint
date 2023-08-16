@@ -74,8 +74,11 @@ body{
     height: 20px;
     width: 30px;
 }
+
 canvas{
     border-radius:0 0 1em 1em;
-    height: 450px;
+    border:1px solid;
+    height: 80vh;
     width: 100%;
 }
+
