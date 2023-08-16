@@ -13,7 +13,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(230deg,#ca0270f6 20%,#3700ff);
+    background:linear-gradient(230deg,#ca0270f6 20%,#3700ff) center fixed no-repeat;
     position: relative;
     overflow:hidden;
     
