@@ -7,7 +7,7 @@ const clear = document.querySelector(".clear");
 const save = document.querySelector(".saveBtn");
 
 let ctx = canvas.getContext("2d");
-let isDrowing = false;
+let isDrawing = false;
 brushRange.value = 1;
 let brushCol = "";
 function resz() {
@@ -20,14 +20,14 @@ resz();
 
 //--------------- function for mouse envents --------------------
 
-function drow(e) {
+function draw(e) {
   e.preventDefault();
-  isDrowing = true;
+  isDrawing = true;
 }
 
-function Drowing(e) {
+function Drawing(e) {
   e.preventDefault();
-  if (!isDrowing) return;
+  if (!isDrawing) return;
   let x = e.offsetX;
   let y = e.offsetY;
   ctx.lineWidth = brushRange.value;
@@ -39,12 +39,12 @@ function Drowing(e) {
 function endDrawing(e) {
   e.preventDefault();
   ctx.beginPath();
-  isDrowing = false;
+  isDrawing = false;
 }
 
 //--------------- function for touch envent --------------------
 
-function DrowingPhone(e) {
+function DrawingPhone(e) {
   e.preventDefault();
   let x = e.touches[0].clientX - canvas.offsetLeft;
   let y = e.touches[0].clientY - canvas.offsetTop;
@@ -60,8 +60,8 @@ function endDrawingPhone() {
 }
 //--------------- envents for mouse --------------------
 
-canvas.addEventListener("mousedown", drow);
-canvas.addEventListener("mousemove", Drowing);
+canvas.addEventListener("mousedown", draw);
+canvas.addEventListener("mousemove", Drawing);
 canvas.addEventListener("mouseup", endDrawing);
 canvas.addEventListener("mouseleave", endDrawing);
 
@@ -86,7 +86,7 @@ save.addEventListener("click", () => {
 });
 //--------------- envents for touch --------------------
 
-canvas.addEventListener("touchmove", DrowingPhone);
+canvas.addEventListener("touchmove", DrawingPhone);
 canvas.addEventListener("touchend", endDrawingPhone);
 canvas.addEventListener("touchstart", () => {
   console.log(1);
