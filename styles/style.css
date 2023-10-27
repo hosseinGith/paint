@@ -1,83 +1,82 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    outline: 0;
-    transition: all .3s;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: 0;
+  transition: all 0.3s;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:linear-gradient(230deg,#ca0270f6 20%,#3700ff) center fixed no-repeat;
-    position: relative;
-    overflow:hidden;
-    
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(230deg, #ca0270f6 20%, #3700ff) center fixed
+    no-repeat;
+  position: relative;
+  overflow: hidden;
 }
-.container{
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 1em;
-    font-size: 13px;
+.container {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1em;
+  font-size: 13px;
 }
-.tools{
-    border-radius: 1em 1em 0 0 ;
-    width: 100%;
-    border: 1px solid;
-    border-bottom: 1px solid transparent;
-    padding: 2px 2px;
-    left: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
+.tools {
+  border-radius: 1em 1em 0 0;
+  width: 100%;
+  border: 1px solid;
+  border-bottom: 1px solid transparent;
+  padding: 2px 2px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
 }
 .drowOptionContainer,
-.saveClear{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.saveClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .drowOptionContainer button,
-.saveClear button{
-    background-color: #eee;
-    padding: 5px 20px;
-    min-width: 50px;
-    margin: 5px;
-    border-radius: 1em;
-    border: 0;
-    font-size: 1em;
-    font-weight: 800;
-    cursor: pointer;
+.saveClear button {
+  background-color: #eee;
+  padding: 5px 20px;
+  min-width: 50px;
+  margin: 5px;
+  border-radius: 1em;
+  border: 0;
+  font-size: 1em;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .drowOptionContainer button:hover,
-.saveClear button:hover{
-    background-color: #ddd;
+.saveClear button:hover {
+  background-color: #ddd;
 }
 .drowOptionContainer button:active,
-.saveClear button:active{
-    background-color: #00000080;
+.saveClear button:active {
+  background-color: #00000080;
 }
-.brushColor{
-    border: 0;
-    border-radius: 1em;
-    height: 20px;
-    width: 30px;
-}
-
-canvas{
-    border-radius:0 0 1em 1em;
-    border:1px solid;
-    height: 75vh;
-    width: 100%;
+.brushColor {
+  border: 0;
+  border-radius: 1em;
+  height: 20px;
+  width: 30px;
 }
 
+canvas {
+  border-radius: 0 0 1em 1em;
+  border: 1px solid;
+  height: 75vh;
+  width: 100%;
+}

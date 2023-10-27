@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Draw</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="tools">
-            <div class="drowOptionContainer">
-                <button class="brush">قلم <i class="fa fa-brush"></i></button>
-                <button class="eraser">پاک کن <i class="fa fa-eraser"></i></button>
-            </div>
-            <div class="brushSizeColor">
-                <input class="brushRange" min="1" max="10" type="range">
-                <input class="brushColor" type="color">
-            </div>
-            <div class="saveClear">
-                <button class="clear">پاک کردن صفحه</button>
-            </div>
+      <div class="tools">
+        <div class="drowOptionContainer">
+          <button class="brush">قلم <i class="fa fa-brush"></i></button>
+          <button class="eraser">پاک کن <i class="fa fa-eraser"></i></button>
         </div>
-        <canvas></canvas>
+        <div class="brushSizeColor">
+          <input class="brushRange" min="1" max="10" type="range" />
+          <input class="brushColor" type="color" />
+        </div>
+        <div class="saveClear">
+          <button class="clear">پاک کردن صفحه</button>
+          <div class="save">
+            <button class="saveBtn fa fa-save"></button>
+          </div>
+        </div>
+      </div>
+      <canvas></canvas>
     </div>
-    
     <script src="javascriptFiles/javas.js"></script>
-</body>
+  </body>
 </html>
