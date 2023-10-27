@@ -18,30 +18,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-header {
-  width: 95%;
-}
-.editTools {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px 0;
-}
-.editTools .paintOptional {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  font-weight: 1000;
-}
-.editTools .paintOptional .paintOptionalBtn {
-  padding: 10px 20px;
-  font-size: 20px;
-}
+
 .container {
   width: 95%;
   display: flex;
