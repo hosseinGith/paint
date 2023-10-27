@@ -162,7 +162,9 @@ save.addEventListener("click", () => {
 
 canvas.addEventListener("touchmove", DrawingPhone);
 canvas.addEventListener("touchend", endDrawingPhone);
-
+canvas.addEventListener("touchstart", () => {
+  console.log(1);
+});
 //----------if the user change the window size ,the canvas will refresh the self offset width-----
 
 window.addEventListener("resize", resz);
